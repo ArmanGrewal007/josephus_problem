@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <title>Josephus Problem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <hr><hr>
+    <br>
+    <div align="center">
+        <h1>Josephus Problem</h1>
+    </div>
+    <div class="container">
+        <div class="child-l">
+            <h3>Story behind <i>Flavius Josephus</i></h3>
+        </div>
+        <div class="child">
+            <h2>Josephus Problem Simulation</h2>
+            <canvas id="canvas1" width="600" height="500"></canvas>
+            <br>
+            <label for="delay">Delay: </label>
+            <input type="range" id="delay" min="100" max="2000" value="750">
+            <span id="delay-count">4</span>
+            <br>
+            <label for="n-circles">Number of Circles: </label>
+            <input type="range" id="n-circles" min="1" max="30" value="20">
+            <span id="n-circles-count">4</span>
+            <br>
+            <label for="k-val">K value: </label>
+            <input type="range" id="k-val" min="2" max="5" value="2">
+            <span id="k-val-count">4</span>
+            <br>
+            <label for="R-circles">Master Radius: </label>
+            <input type="range" id="R-circles" min="50" max="300" value="200">
+            <span id="R-circles-val">4</span>
+            <br>
+            <label for="r-circles">Circle Radius: </label>
+            <input type="range" id="r-circles" min="5" max="30" value="20">
+            <span id="r-circles-val">4</span>
+            <br>
+            <button id="play-button">Play Josephus</button>
+            <button id="refreshButton">Refresh</button>
+            <br><br>
+        </div>
+    </div>
+    <hr><hr><br>
+    <div align="center">
+        <h1>Solutions</h1>
+    </div>
+    <div class="container">
+
+    </div>
+    <hr><hr><br>
+
+    <div align="center">
+        <h1>Possible patterns?</h1>
+    </div>
+    <div align="center">
+        <canvas id="canvas2" width="1000" height="1000"></canvas>
+    </div>
+
+    <script src="script.js" async></script>
+</body>
+</html>
