@@ -27,7 +27,7 @@ canvas {
     flex: 1; /* This makes both children take up equal space */
     padding: 20px;
     box-sizing: border-box;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .child-l {
@@ -36,3 +36,4 @@ canvas {
     box-sizing: border-box;
     /* text-align: center; */
 }
+

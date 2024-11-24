@@ -122,8 +122,14 @@ class JosephusSimulation {
             rarr.push(arr[removal_index]);
             arr.splice(removal_index, 1);
             start_index = removal_index;
+
+            const radius = parseInt(r_circles.value, 10); 
+            const outerRadius = parseInt(R_circles.value, 10); 
+            const centerX = canvas.width / 2; 
+            const centerY = (canvas.height / 2) - outerRadius; 
+
             
-            await this.drawBeadandSpiral(300, 50, 20, 200, n, rarr);
+            await this.drawBeadandSpiral(centerX, centerY, radius, outerRadius, n, rarr);
         }
     
         return arr[0];
@@ -151,13 +157,15 @@ function updateCanvas(new_n, new_k) {
     const _r = parseInt(r_circles.value, 10);
     const _k = parseInt(k_val.value, 10);
     const _d = parseInt(delay_c.value, 10);
+    const centerX = canvas.width / 2; 
+    const centerY = canvas.height / 2 - _R; 
     n_circles_Display.textContent = _n;
     R_circles_Display.textContent = _R;
     r_circles_Display.textContent = _r;
     k_val_Display.textContent     = _k;
     delay_Display.textContent     = _d;
     var simulation = new JosephusSimulation(_d);
-    simulation.drawBeadandSpiral(300, 50, _r, _R, _n);
+    simulation.drawBeadandSpiral(centerX, centerY, _r, _R, _n);
     if (new_n && new_k) {
         simulation.josephus(new_n, new_k);
     }
@@ -308,6 +316,6 @@ function drawTable(x) {
     }
     return arr
 }
-arr = drawTable(1000);
+arr = drawTable(100);
 printArray(arr)
 
